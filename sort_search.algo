@@ -1,0 +1,48 @@
+// procedure that swap two elements in a array
+PROCEDURE swap(VAR x, VAR y:INTEGER)
+VAR
+    z :INTEGER;
+BEGIN
+    z := x;
+    x := y;
+    y := z;
+END
+// Procedure that read an array
+PROCEDURE read_T(l :INTEGER, T : ARRAY_OF INTEGER[l];)
+VAR
+    i: INTEGER;
+BEGIN
+    FOR i FROM 0 TO l-1  DO
+        Read(T[i]);
+    END_FOR
+END
+// procedure that sort and search in a array
+PROCEDURE sort(VAR tab : ARRAY_OF INTEGER)
+VAR
+    i,j,k,l : INTEGER;
+BEGIN
+     l := tab.length;
+   FOR i FROM 0 TO l-2 STEP 1  DO
+       k := i;
+       FOR j  FROM i  TO l-i-2 STEP 1  DO
+           IF (tab[j]<tab[k]) THEN
+               k := j;
+           END_IF
+       END_FOR
+   swap(arr[k],arr[i])
+   END_FOR
+END
+
+// Algorithne that print an a sorted and ordered array
+ALGORITHM sortsearch
+VAR
+    arr : ARRAY_OF INTEGER[l];
+    i,l : INTEGER;
+BEGIN
+    Read(l);
+    read_T(arr);
+    sort(arr);
+    FOR i FROM 0 TO l-1 DO
+        Write(arr[i]);
+    END_FOR
+END
