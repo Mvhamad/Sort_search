@@ -29,7 +29,7 @@ BEGIN
                k := j;
            END_IF
        END_FOR
-   swap(arr[k],arr[i])
+   swap(tab[k],tab[i])
    END_FOR
 END
 
